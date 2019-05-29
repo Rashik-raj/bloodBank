@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Blood-bank</title>
+    <link rel="icon" href="pix/logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/layout.css"> {% block style %}{% endblock %}
+
+</head>
+
+<body>
+    <nav id="header">
+        <div class="logo">
+            <a href="#"><img src="pix/logo.png" alt="logo" id="logo"></a>
+        </div>
+        <div id="banner">
+            blood-
+            <font id="bannerTitle">bank</font>
+        </div>
+        <ul>
+            <a href="/home">
+                <li>Home</li>
+            </a>
+            <a href="/request">
+                <li>Request-Blood</li>
+            </a>
+            <a href="/register">
+                <li>Register</li>
+            </a>
+        </ul>
+    </nav>
+    <div class="container-fluid" id="wrapper">
+
+        {% block content %} {% endblock %}
+
+    </div>
+    <div id="goUp">
+        Up
+    </div>
+    <footer>
+        &copy; 2017-
+        <?php echo date("Y")?> Copyright Rashikraj Shrestha
+        <br> 9860080002
+        <br> KTM, Nepal
+    </footer>
+</body>
+
+</html>
+<!-- scripts -->
+<script src="js/layout.js"></script>
+{% block script %} {% endblock %}

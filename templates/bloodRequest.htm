@@ -1,0 +1,124 @@
+{% extends 'layout.htm' %} {% block style %}
+
+<link rel="stylesheet" href="css/floating-labels.css"> {% endblock %} {% block content%}
+<form class="form" method="post" action="">
+    <h1>Request Blood</h1>
+    <div class="form-label-group">
+        <input type="text" id="fullName" name="fullName" class="form-control" placeholder="First name" autofocus>
+        <label for="fullName">Full name</label>
+    </div>
+    <div class="form-label-group">
+        <select name="district" id="district" class="form-control">
+          <option value="0">Choose district of current residence</option>
+          <option value="Achham">Achham</option>
+          <option value="Arghakhanchi">Arghakhanchi</option>
+          <option value="Baglung">Baglung</option>
+          <option value="Baitadi">Baitadi</option>
+          <option value="Bajhang">Bajhang</option>
+          <option value="Bajura">Bajura</option>
+          <option value="Banke">Banke</option>
+          <option value="Bara">Bara</option>
+          <option value="Bardiya">Bardiya</option>
+          <option value="Bhaktapur">Bhaktapur</option>
+          <option value="Bhojpur">Bhojpur</option>
+          <option value="Chitwan">Chitwan</option>
+          <option value="Dadeldhura">Dadeldhura</option>
+          <option value="Dailekh">Dailekh</option>
+          <option value="Dang">Dang</option>
+          <option value="Darchula">Darchula</option>
+          <option value="Dhading">Dhading</option>
+          <option value="Dhankuta">Dhankuta</option>
+          <option value="Dhanusha">Dhanusha</option>
+          <option value="Dolakha">Dolakha</option>
+          <option value="Dolpa">Dolpa</option>
+          <option value="Doti">Doti</option>
+          <option value="Gorkha">Gorkha</option>
+          <option value="Gulmi">Gulmi</option>
+          <option value="Humla">Humla</option>
+          <option value="Ilam">Ilam</option>
+          <option value="Jajarkot">Jajarkot</option>
+          <option value="Jhapa">Jhapa</option>
+          <option value="Jumla">Jumla</option>
+          <option value="Kailali">Kailali</option>
+          <option value="Kalikot">Kalikot</option>
+          <option value="Kanchanpur">Kanchanpur</option>
+          <option value="Kapilbastu">Kapilbastu</option>
+          <option value="Kaski">Kaski</option>
+          <option value="Kathmandu">Kathmandu</option>
+          <option value="Kavrepalanchok">Kavrepalanchok</option>
+          <option value="Khotang">Khotang</option>
+          <option value="Lalitpur">Lalitpur</option>
+          <option value="Lamjung">Lamjung</option>
+          <option value="Mahottari">Mahottari</option>
+          <option value="Makawanpur">Makawanpur</option>
+          <option value="Manang">Manang</option>
+          <option value="Morang">Morang</option>
+          <option value="Mugu">Mugu</option>
+          <option value="Mustang">Mustang</option>
+          <option value="Myagdi">Myagdi</option>
+          <option value="Nawalparasi">Nawalparasi</option>
+          <option value="Nuwakot">Nuwakot</option>
+          <option value="Okhaldhunga">Okhaldhunga</option>
+          <option value="Palpa">Palpa</option>
+          <option value="Panchthar">Panchthar</option>
+          <option value="Parbat">Parbat</option>
+          <option value="Parsa">Parsa</option>
+          <option value="Pyuthan">Pyuthan</option>
+          <option value="Ramechhap">Ramechhap</option>
+          <option value="Rasuwa">Rasuwa</option>
+          <option value="Rautahat">Rautahat</option>
+          <option value="Rolpa">Rolpa</option>
+          <option value="Rukum">Rukum</option>
+          <option value="Rupandehi">Rupandehi</option>
+          <option value="Salyan">Salyan</option>
+          <option value="Sankhuwasabha">Sankhuwasabha</option>
+          <option value="Saptari">Saptari</option>
+          <option value="Sarlahi">Sarlahi</option>
+          <option value="Sindhuli">Sindhuli</option>
+          <option value="Sindhupalchok">Sindhupalchok</option>
+          <option value="Siraha">Siraha</option>
+          <option value="Solukhumbu">Solukhumbu</option>
+          <option value="Sunsari">Sunsari</option>
+          <option value="Surkhet">Surkhet</option>
+          <option value="Syangja">Syangja</option>
+          <option value="Tanahun">Tanahun</option>
+          <option value="Taplejung">Taplejung</option>
+          <option value="Terhathum">Terhathum</option>
+          <option value="Udayapur">Udayapur</option>
+        </select>
+    </div>
+    <div class="form-label-group">
+        <input type="text" id="address" name="address" class="form-control" placeholder="Address" autofocus>
+        <label for="address">Address</label>
+    </div>
+    <div class="form-label-group">
+        <input type="text" id="primaryContact" name="primaryContact" class="form-control" placeholder="Primary contact" autofocus>
+        <label for="primaryContact">Primary contact</label>
+    </div>
+    <div class="form-label-group">
+        <input type="text" id="secondaryContact" name="secondaryContact" class="form-control" placeholder="Secondary contact" autofocus>
+        <label for="secondaryContact">Secondary contact</label>
+    </div>
+    <div class="form-label-group">
+        <input type="email" id="email" name="email" class="form-control" placeholder="Email address" autofocus>
+        <label for="email">Email address</label>
+    </div>
+    <div class="form-label-group">
+        <select name="bloodGroup" id="bloodGroup" class="form-control">
+          <option value="0">Select blood group</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+    </div>
+    <div class="form-label-group">
+        <textarea id="description" name="description" class="form-control" placeholder="Description" autofocus></textarea>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Request</button>
+</form>
+{% endblock %}
