@@ -1,7 +1,7 @@
 {% extends 'layout.htm' %} {% load static %} {% block style %}
 
 <link rel="stylesheet" href="{% static 'css/floating-labels.css' %}"> {% endblock %} {% block content %}
-<form class="form" method="post" action="">
+<form class="form" method="post" action="{% url 'requestBlood' %}">{% csrf_token %}
     <h1>Request Blood</h1>
     <div class="form-label-group">
         <input type="text" id="fullName" name="fullName" class="form-control" placeholder="First name" autofocus>

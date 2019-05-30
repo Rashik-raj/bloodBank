@@ -1,0 +1,3 @@
+{% extends 'layout.htm' %} {% load static %} {% block style %}{% endblock %} {% block content %}
+<br> Results are:{% for result in results %}
+<br> {{result.firstName}} {{result.district}} {{result.bloodGroup}} {% endfor %}{% endblock %} {% block script %} {% endblock %}

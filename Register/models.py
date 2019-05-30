@@ -12,3 +12,6 @@ class Donors(models.Model):
     email = models.EmailField()
     bloodGroup = models.CharField(max_length=3)
     gender = models.CharField(max_length=6)
+
+    def __str__(self):
+        return self.firstName + " " + self.bloodGroup

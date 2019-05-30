@@ -109,7 +109,8 @@ footer {
     cursor: pointer;
 }
 
-.form h1 {
+.form h1,
+.form h2 {
     text-align: center;
     text-shadow: 2px 2px 5px black;
 }
