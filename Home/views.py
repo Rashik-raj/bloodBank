@@ -1,5 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.http import HttpRequest
+from django.shortcuts import render
 # Create your views here.
 def index(request):
-    return render(request, 'index.htm')
+    return render(request, 'home.htm',)

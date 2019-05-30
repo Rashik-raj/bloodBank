@@ -1,16 +1,9 @@
-{% extends 'layout.htm' %} {% block style %}
+{% extends 'layout.htm' %} {% load static %} {% block style %}
 
-<link rel="stylesheet" href="css/floating-labels.css">
-<style>
-    .btn {
-        align-self: center;
-    }
-</style>
-
-{% endblock %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/floating-labels.css' %}"> {% endblock %} {% block content %}
 <form class="form" method="post" action="">
-    {{ csrf_field() }}
-    <h1><button onclick="dispSearch()" class="btn"><h1>Search Donor!!!</h1></button></h1>
+    {% csrf_token %}
+    <h2><button class="search" onclick="dispSearch()"><h1>Search Donor !!!</h1></button></h2>
     <div id="searchDonor" style="display: none;">
         <div class="form-label-group">
             <select name="district" id="district" class="form-control">
@@ -110,6 +103,20 @@
 </form>
 <div class="jumbotron bg-success">
     <h1 align="center" class="text-white">Blood Requests</h1>
+    <div class="row">
+        <div class="col-sm-4 border border-white rounded">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="col-sm-4 border border-white rounded">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="col-sm-4 border border-white rounded">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+    </div>
     <div class="row">
         <div class="col-sm-4 border border-white rounded">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor

@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html>
 
@@ -7,30 +8,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Blood-bank</title>
-    <link rel="icon" href="pix/logo.png">
+    <link rel="icon" href="{% static 'pix/logo.png' %}">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/layout.css"> {% block style %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}"> {% block style %}{% endblock %}
 
 </head>
 
 <body>
     <nav id="header">
         <div class="logo">
-            <a href="#"><img src="pix/logo.png" alt="logo" id="logo"></a>
+            <a href="#"><img src="{% static 'pix/logo.png' %}" alt="logo" id="logo"></a>
         </div>
         <div id="banner">
-            blood-
-            <font id="bannerTitle">bank</font>
+            Blood
+            <font id="bannerTitle">Bank</font>
         </div>
         <ul>
             <a href="/home">
                 <li>Home</li>
             </a>
-            <a href="/request">
+            <a href="/bloodRequest">
                 <li>Request-Blood</li>
             </a>
             <a href="/register">
@@ -47,8 +48,7 @@
         Up
     </div>
     <footer>
-        &copy; 2017-
-        <?php echo date("Y")?> Copyright Rashikraj Shrestha
+        &copy; 2017-{% now "Y" %} Copyright Rashikraj Shrestha
         <br> 9860080002
         <br> KTM, Nepal
     </footer>
@@ -56,5 +56,5 @@
 
 </html>
 <!-- scripts -->
-<script src="js/layout.js"></script>
+<script src="{% static 'js/layout.js' %}"></script>
 {% block script %} {% endblock %}

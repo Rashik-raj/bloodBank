@@ -1,6 +1,6 @@
-{% extends 'layout.htm' %} {% block style %}
+{% extends 'layout.htm' %} {% load static %} {% block style %}
 
-<link rel="stylesheet" href="css/floating-labels.css"> {% endblock %} {% block content%}
+<link rel="stylesheet" href="{% static 'css/floating-labels.css' %}"> {% endblock %} {% block content %}
 <form class="form" method="post" action="">
     <h1>Request Blood</h1>
     <div class="form-label-group">
